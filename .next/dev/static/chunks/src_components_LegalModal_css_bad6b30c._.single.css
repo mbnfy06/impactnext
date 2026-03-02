@@ -1,0 +1,98 @@
+/* [project]/src/components/LegalModal.css [app-client] (css) */
+.legal-modal-overlay {
+  z-index: 10000;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background-color: #000000d9;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  display: flex;
+  position: fixed;
+  inset: 0;
+}
+
+.legal-modal {
+  background-color: #fff;
+  border-radius: 12px;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  animation: .3s ease-out modalSlideIn;
+  display: flex;
+  position: relative;
+  box-shadow: 0 25px 50px -12px #00000040;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.legal-modal-close {
+  cursor: pointer;
+  color: #666;
+  z-index: 10;
+  background: none;
+  border: none;
+  font-size: 28px;
+  line-height: 1;
+  transition: color .2s;
+  position: absolute;
+  top: 16px;
+  right: 20px;
+}
+
+.legal-modal-close:hover {
+  color: #000;
+}
+
+.legal-modal-header {
+  border-bottom: 1px solid #eee;
+  padding: 24px 32px;
+}
+
+.legal-modal-header h2 {
+  color: #1a1a1a;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.legal-modal-content {
+  color: #4a4a4a;
+  padding: 32px;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-y: auto;
+}
+
+.legal-modal-content h3 {
+  color: #1a1a1a;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.legal-modal-content p {
+  margin-bottom: 16px;
+}
+
+.legal-modal-content ul {
+  margin-bottom: 16px;
+  padding-left: 20px;
+}
+
+.legal-modal-content li {
+  margin-bottom: 8px;
+}
+
+/*# sourceMappingURL=src_components_LegalModal_css_bad6b30c._.single.css.map*/

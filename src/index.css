@@ -1,0 +1,328 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== CSS Custom Properties ===== */
+:root {
+  /* Colors */
+  --primary-yellow: #F5A623;
+  --primary-yellow-hover: #E09000;
+  --bg-dark: #0D1117;
+  /* Zync premium dark */
+  --bg-dark-secondary: #161B22;
+  --bg-light: #FAFAFA;
+  --bg-white: #FFFFFF;
+  --bg-surface: rgba(255, 255, 255, 0.03);
+  /* Glassmorphism 2.0 surface */
+  --border-surface: rgba(255, 255, 255, 0.08);
+  /* Glassmorphism 2.0 border */
+  --text-white: #FFFFFF;
+  --text-dark: #1A1A1A;
+  --text-gray: #8B949E;
+  --text-gray-light: #A0A0A0;
+  --border-light: #E5E7EB;
+  --border-dark: #30363D;
+
+  /* Typography */
+  --font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+
+  /* Fluid Typography (clamp) */
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-sm: clamp(0.875rem, 0.82rem + 0.25vw, 1rem);
+  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1.05rem + 0.38vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 1.15rem + 0.51vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 1.35rem + 0.76vw, 1.875rem);
+  --text-3xl: clamp(1.875rem, 1.65rem + 1.14vw, 2.25rem);
+  --text-4xl: clamp(2.25rem, 1.95rem + 1.52vw, 3rem);
+  --text-5xl: clamp(3rem, 2.5rem + 2.53vw, 4rem);
+
+  /* Fluid Spacing */
+  --space-2xs: clamp(0.25rem, 0.23rem + 0.1vw, 0.375rem);
+  --space-xs: clamp(0.5rem, 0.45rem + 0.25vw, 0.75rem);
+  --space-sm: clamp(0.75rem, 0.68rem + 0.38vw, 1.125rem);
+  --space-md: clamp(1rem, 0.9rem + 0.51vw, 1.5rem);
+  --space-lg: clamp(1.5rem, 1.35rem + 0.76vw, 2.25rem);
+  --space-xl: clamp(2.25rem, 2.03rem + 1.14vw, 3.375rem);
+  --space-2xl: clamp(3rem, 2.7rem + 1.52vw, 4.5rem);
+  --space-3xl: clamp(4.5rem, 4.05rem + 2.28vw, 6.75rem);
+
+  --container-max: 1200px;
+  --section-padding: var(--space-3xl);
+  --header-height: 80px;
+  --header-height-shrunk: 60px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Multilayer Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-glow: 0 0 30px rgba(245, 166, 35, 0.4);
+  --shadow-glow-strong: 0 0 50px rgba(245, 166, 35, 0.6);
+}
+
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--bg-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Utilities ===== */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: var(--section-padding) 0;
+}
+
+.section-dark {
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+}
+
+.section-light {
+  background-color: var(--bg-light);
+}
+
+/* ===== Typography ===== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  /* Kerning dinámico para dar un carácter editorial premium */
+}
+
+.text-yellow {
+  color: var(--primary-yellow);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary-yellow), #FF8C00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-secondary {
+  opacity: 0.7;
+  /* Jerarquía visual de opacidad para textos menos relevantes */
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 15px;
+  transition: all var(--transition-medium);
+}
+
+.btn-primary {
+  background-color: var(--primary-yellow);
+  color: var(--bg-dark);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-yellow-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-white);
+  border: 1px solid var(--text-white);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn-link {
+  color: var(--primary-yellow);
+  padding: 0;
+  font-weight: 500;
+  gap: 6px;
+}
+
+.btn-link:hover {
+  gap: 10px;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* ===== Card 3D Effect ===== */
+.card-3d {
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.card-3d:hover {
+  box-shadow: var(--shadow-glow);
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-dark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-gray);
+}
+
+/* ===== Glass Button Styles ===== */
+.glass-button-wrap {
+  position: relative;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.glass-button-wrap:hover {
+  transform: translateY(-2px);
+}
+
+.glass-button-wrap:active {
+  transform: translateY(0);
+}
+
+.glass-button {
+  background: linear-gradient(135deg, rgba(245, 166, 35, 0.25), rgba(255, 140, 0, 0.15));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(245, 166, 35, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(245, 166, 35, 0.1);
+  color: var(--primary-yellow);
+  font-weight: 600;
+}
+
+.glass-button:hover {
+  background: linear-gradient(135deg, rgba(245, 166, 35, 0.35), rgba(255, 140, 0, 0.25));
+  border-color: rgba(245, 166, 35, 0.6);
+  box-shadow: 0 6px 20px rgba(245, 166, 35, 0.3);
+  color: #FFFFFF;
+}
+
+.glass-button-shadow {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: -4px;
+  bottom: -4px;
+  background: rgba(245, 166, 35, 0.15);
+  filter: blur(12px);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glass-button-wrap:hover .glass-button-shadow {
+  opacity: 1;
+}
