@@ -8,7 +8,7 @@
 - **Objetivo:** Asegurar la visibilidad del texto en todo momento y darle un toque más premium que una barra de ancho completo.
 - **Acción:** La navbar no ocupará todo el ancho desde el principio. Flotará en la parte superior con márgenes (`top-4`) y tendrá un ancho máximo contenido (ej: `max-w-6xl` o similar).
 - **Fondo:** Tendrá un fondo translúcido permanente (ej: `bg-black/60 backdrop-blur-md`) y un borde sutil (`border border-white/10`).
-
+aaa
 > COMENTARIO: Pero quiero la animacion de la barra que se encoja al hacer scroll. asique hazlo como consideres como un profesional. puedes hacer que empiece el en fondo del Hero y que al hacer la animacion coja el efecto translucido
 
 ## 2. Tamaños Dinámicos y Ensanchamiento (Scroll)

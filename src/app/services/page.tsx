@@ -6,6 +6,8 @@ import { serviceCatalog, type ServiceCategory } from "@/data/servicesCatalogData
 import { ArrowLeft, ImageIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 
+import { MorphingText } from "@/components/ui/morphing-text";
+
 /* ─── animation variants ─── */
 const containerVariants = {
     hidden: {},
@@ -103,6 +105,17 @@ export default function ServicesPage() {
 
     const activeCat = serviceCatalog[activeIndex];
 
+    const animatedWords = [
+        "Destacar en el Punto de Venta",
+        "Campañas de Trade Marketing",
+        "Material PLV Impactante",
+        "Merchandising Estratégico",
+        "Rotulación de Espacios",
+        "Renovar tus Pantallas Digitales",
+        "Packaging Personalizado",
+        "Impresión de Gran Formato"
+    ];
+
     // Handle hash on mount
     useEffect(() => {
         const hash = window.location.hash.replace("#", "");
@@ -132,9 +145,11 @@ export default function ServicesPage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 tracking-tight"
+                        className="text-[clamp(1.1rem,3.5vw+0.1rem,4.5rem)] font-bold text-white mb-6 tracking-tight flex items-center md:items-baseline gap-1 md:gap-3 whitespace-nowrap"
                     >
-                        Nuestro Catálogo
+                        <span>¿Necesitas</span>
+                        <MorphingText words={animatedWords} className="text-[var(--primary-yellow)]" />
+                        <span>?</span>
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -142,22 +157,22 @@ export default function ServicesPage() {
                         transition={{ duration: 0.6, delay: 0.1 }}
                         className="text-neutral-400 text-lg md:text-xl max-w-2xl leading-relaxed"
                     >
-                        Explora todas nuestras soluciones. Desde impresión digital hasta
-                        digital signage, cubrimos cada necesidad de tu marca.
+                        Descubre nuestro amplio catálogo de soluciones para impulsar tu marca. Desde ideas iniciales hasta la ejecución final.
                     </motion.p>
                 </div>
 
                 {/* ─── Category Tabs ─── */}
                 <div className="relative mb-12 border-b border-white/[0.06]">
-                    <div className="flex flex-wrap justify-center gap-1 pb-px">
+                    <div className="flex overflow-x-auto pb-4 gap-2 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] sm:flex-wrap sm:justify-center sm:overflow-visible sm:pb-px">
                         {serviceCatalog.map((cat, i) => (
-                            <CategoryTab
-                                key={cat.id}
-                                cat={cat}
-                                active={activeIndex === i}
-                                onClick={() => setActiveIndex(i)}
-                                tabRef={(el) => { tabsRef.current[i] = el; }}
-                            />
+                            <div key={cat.id} className="shrink-0 snap-start">
+                                <CategoryTab
+                                    cat={cat}
+                                    active={activeIndex === i}
+                                    onClick={() => setActiveIndex(i)}
+                                    tabRef={(el) => { tabsRef.current[i] = el; }}
+                                />
+                            </div>
                         ))}
                     </div>
                 </div>
@@ -191,14 +206,7 @@ export default function ServicesPage() {
                                     {activeCat.description}
                                 </motion.p>
                             </div>
-                            <motion.span
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                transition={{ delay: 0.2 }}
-                                className="text-neutral-600 text-sm hidden sm:block"
-                            >
-                                {activeCat.items.length} Productos
-                            </motion.span>
+
                         </div>
 
                         {/* Product grid */}
