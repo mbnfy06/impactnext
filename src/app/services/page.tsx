@@ -46,14 +46,14 @@ function CategoryTab({
             <div className={`
         w-[52px] h-[52px] rounded-2xl flex items-center justify-center transition-all duration-300
         ${active
-                    ? "bg-[rgba(245,166,35,0.12)] border border-[rgba(245,166,35,0.3)] shadow-[0_0_24px_rgba(245,166,35,0.15)]"
-                    : "bg-transparent border border-transparent group-hover:bg-white/[0.04] group-hover:border-white/[0.08]"
+                    ? "bg-[rgba(245,166,35,0.1)] border border-[rgba(245,166,35,0.25)] shadow-[0_0_24px_rgba(245,166,35,0.12)]"
+                    : "bg-transparent border border-transparent group-hover:bg-neutral-100 group-hover:border-neutral-200"
                 }
       `}>
-                <Icon strokeWidth={active ? 2.5 : 2} className={`w-6 h-6 transition-all duration-300 ${active ? "text-[var(--primary-yellow)]" : "text-neutral-500 group-hover:text-neutral-300"}`} />
+                <Icon strokeWidth={active ? 2.5 : 2} className={`w-6 h-6 transition-all duration-300 ${active ? "text-[var(--primary-yellow)]" : "text-neutral-400 group-hover:text-neutral-700"}`} />
             </div>
             <span className={`text-[13px] font-semibold transition-colors duration-300 whitespace-nowrap
-        ${active ? "text-[var(--primary-yellow)]" : "text-neutral-500 group-hover:text-neutral-300"}
+        ${active ? "text-[var(--primary-yellow)]" : "text-neutral-400 group-hover:text-neutral-700"}
       `}>
                 {cat.label}
             </span>
@@ -74,23 +74,23 @@ function ProductCard({ name, image, index }: { name: string; image?: string; ind
         >
             {/* Image placeholder */}
             <div className="relative aspect-square rounded-2xl overflow-hidden mb-3
-                      bg-neutral-800/50 border border-white/[0.04]
+                      bg-white border border-neutral-200 shadow-sm
                       transition-all duration-400
-                      group-hover:border-[rgba(245,166,35,0.2)] group-hover:bg-neutral-800/80
-                      group-hover:shadow-[0_8px_32px_rgba(245,166,35,0.08)]">
+                      group-hover:border-[rgba(245,166,35,0.4)] group-hover:bg-white
+                      group-hover:shadow-[0_8px_32px_rgba(245,166,35,0.15),0_0_0_1px_rgba(245,166,35,0.1)]">
                 {image ? (
                     <img src={image} alt={name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 ) : (
                     <div className="absolute inset-0 flex items-center justify-center">
-                        <ImageIcon className="w-8 h-8 text-neutral-700 group-hover:text-neutral-500 transition-colors duration-300" />
+                        <ImageIcon className="w-8 h-8 text-neutral-300 group-hover:text-neutral-400 transition-colors duration-300" />
                     </div>
                 )}
                 {/* Hover overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent
                         opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
             {/* Product name */}
-            <p className="text-[13px] text-neutral-400 group-hover:text-white transition-colors duration-300 leading-snug px-1">
+            <p className="text-[13px] text-neutral-600 group-hover:text-neutral-900 transition-colors duration-300 leading-snug px-1">
                 {name}
             </p>
         </motion.div>
@@ -126,16 +126,16 @@ export default function ServicesPage() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-[var(--bg-dark)] pt-32 pb-20 relative overflow-hidden">
+        <div className="min-h-screen bg-[#FAFAFA] pt-32 relative overflow-hidden">
             {/* Background texture */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(245,166,35,0.06),transparent)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(245,166,35,0.04),transparent)]" />
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* ─── Header ─── */}
                 <div className="mb-14">
                     <button
                         onClick={() => router.push("/")}
-                        className="inline-flex items-center gap-2 text-neutral-500 hover:text-white text-sm mb-6 transition-colors"
+                        className="inline-flex items-center gap-2 text-neutral-500 hover:text-neutral-900 text-sm mb-6 transition-colors"
                     >
                         <ArrowLeft className="w-4 h-4" />
                         Volver al Inicio
@@ -145,7 +145,7 @@ export default function ServicesPage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="text-[clamp(1.1rem,3.5vw+0.1rem,4.5rem)] font-bold text-white mb-6 tracking-tight flex items-center md:items-baseline gap-1 md:gap-3 whitespace-nowrap"
+                        className="text-[clamp(1.1rem,3.5vw+0.1rem,4.5rem)] font-bold text-neutral-900 mb-6 tracking-tight flex items-center md:items-baseline gap-1 md:gap-3 whitespace-nowrap"
                     >
                         <span>¿Necesitas</span>
                         <MorphingText words={animatedWords} className="text-[var(--primary-yellow)]" />
@@ -155,14 +155,14 @@ export default function ServicesPage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.1 }}
-                        className="text-neutral-400 text-lg md:text-xl max-w-2xl leading-relaxed"
+                        className="text-neutral-600 text-lg md:text-xl max-w-2xl leading-relaxed"
                     >
                         Descubre nuestro amplio catálogo de soluciones para impulsar tu marca. Desde ideas iniciales hasta la ejecución final.
                     </motion.p>
                 </div>
 
                 {/* ─── Category Tabs ─── */}
-                <div className="relative mb-12 border-b border-white/[0.06]">
+                <div className="relative mb-12 border-b border-neutral-200">
                     <div className="flex overflow-x-auto pb-4 gap-2 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] sm:flex-wrap sm:justify-center sm:overflow-visible sm:pb-px">
                         {serviceCatalog.map((cat, i) => (
                             <div key={cat.id} className="shrink-0 snap-start">
@@ -193,7 +193,7 @@ export default function ServicesPage() {
                                     initial={{ opacity: 0, x: -20 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.4 }}
-                                    className="text-2xl md:text-3xl font-bold text-white"
+                                    className="text-2xl md:text-3xl font-bold text-neutral-900"
                                 >
                                     {activeCat.label}
                                 </motion.h2>
@@ -206,7 +206,6 @@ export default function ServicesPage() {
                                     {activeCat.description}
                                 </motion.p>
                             </div>
-
                         </div>
 
                         {/* Product grid */}
@@ -223,19 +222,16 @@ export default function ServicesPage() {
                         </motion.div>
                     </motion.div>
                 </AnimatePresence>
+            </div>
 
-                {/* ─── CTA Footer ─── */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.5 }}
-                    className="mt-24 text-center"
-                >
-                    <div className="rounded-3xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl p-10 md:p-14">
-                        <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
+            {/* ─── Light CTA Section ─── */}
+            <div className="pb-24 pt-10 px-4 sm:px-6 lg:px-8 relative z-10">
+                <div className="max-w-7xl mx-auto text-center">
+                    <div className="rounded-3xl border border-neutral-200 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-10 md:p-14 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                        <h3 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-4">
                             ¿No encuentras lo que buscas?
                         </h3>
-                        <p className="text-neutral-400 text-lg mb-8 max-w-xl mx-auto">
+                        <p className="text-neutral-500 text-lg mb-8 max-w-xl mx-auto">
                             Tenemos un catálogo mucho más amplio. Cuéntanos qué necesitas y te
                             preparamos un presupuesto a medida.
                         </p>
@@ -243,14 +239,15 @@ export default function ServicesPage() {
                             onClick={() => router.push("/contact")}
                             className="px-8 py-3.5 rounded-full bg-[var(--primary-yellow)] text-black font-bold text-[15px]
                          hover:bg-[var(--primary-yellow-hover)] transition-all duration-300
-                         shadow-[0_0_20px_rgba(245,166,35,0.3)] hover:shadow-[0_0_35px_rgba(245,166,35,0.5)]
+                         shadow-[0_4px_14px_rgba(245,166,35,0.25)] hover:shadow-[0_6px_20px_rgba(245,166,35,0.4)]
                          hover:-translate-y-0.5"
                         >
                             Pedir Presupuesto
                         </button>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </div>
     );
 }
+

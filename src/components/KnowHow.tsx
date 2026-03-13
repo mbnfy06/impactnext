@@ -193,17 +193,17 @@ const timelineData = [
         title: "01. Análisis",
         content: (
             <div>
-                <p className="text-neutral-200 text-lg mb-8 leading-relaxed">
+                <p className="text-neutral-700 text-lg mb-8 leading-relaxed">
                     Escuchamos tus necesidades, analizamos tu marca, tu mercado y tu competencia. No damos un paso sin entender el contexto completo del proyecto para garantizar que la solución propuesta sea la adecuada.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="bg-neutral-900/50 p-4 rounded-xl border border-white/5">
+                    <div className="bg-white p-4 rounded-xl border border-neutral-200 shadow-sm">
                         <h4 className="text-yellow-500 text-sm font-semibold mb-1">Entregables</h4>
-                        <p className="text-neutral-400 text-sm">Documento de alcance, KPIs y cronograma inicial.</p>
+                        <p className="text-neutral-500 text-sm">Documento de alcance, KPIs y cronograma inicial.</p>
                     </div>
-                    <div className="bg-neutral-900/50 p-4 rounded-xl border border-white/5">
+                    <div className="bg-white p-4 rounded-xl border border-neutral-200 shadow-sm">
                         <h4 className="text-yellow-500 text-sm font-semibold mb-1">Foco</h4>
-                        <p className="text-neutral-400 text-sm">Viabilidad técnica y retorno de inversión esperado.</p>
+                        <p className="text-neutral-500 text-sm">Viabilidad técnica y retorno de inversión esperado.</p>
                     </div>
                 </div>
             </div>
@@ -213,17 +213,17 @@ const timelineData = [
         title: "02. Estrategia",
         content: (
             <div>
-                <p className="text-neutral-200 text-lg mb-8 leading-relaxed">
+                <p className="text-neutral-700 text-lg mb-8 leading-relaxed">
                     Nuestro equipo multidisciplinar diseña una solución a medida. Combinamos creatividad con ingeniería para asegurar que lo que diseñamos se puede producir eficientemente y dentro del presupuesto.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="bg-neutral-900/50 p-4 rounded-xl border border-white/5">
+                    <div className="bg-white p-4 rounded-xl border border-neutral-200 shadow-sm">
                         <h4 className="text-yellow-500 text-sm font-semibold mb-1">Diseño</h4>
-                        <p className="text-neutral-400 text-sm">Renders 3D, planos técnicos y propuesta gráfica.</p>
+                        <p className="text-neutral-500 text-sm">Renders 3D, planos técnicos y propuesta gráfica.</p>
                     </div>
-                    <div className="bg-neutral-900/50 p-4 rounded-xl border border-white/5">
+                    <div className="bg-white p-4 rounded-xl border border-neutral-200 shadow-sm">
                         <h4 className="text-yellow-500 text-sm font-semibold mb-1">Presupuesto</h4>
-                        <p className="text-neutral-400 text-sm">Costes detallados y opciones de materiales.</p>
+                        <p className="text-neutral-500 text-sm">Costes detallados y opciones de materiales.</p>
                     </div>
                 </div>
             </div>
@@ -233,17 +233,17 @@ const timelineData = [
         title: "03. Producción",
         content: (
             <div>
-                <p className="text-neutral-200 text-lg mb-8 leading-relaxed">
+                <p className="text-neutral-700 text-lg mb-8 leading-relaxed">
                     Gestionamos la producción de principio a fin en nuestras instalaciones de España o China. Realizamos controles de calidad en cada fase (corte, impresión, ensamblaje) para evitar sorpresas.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="bg-neutral-900/50 p-4 rounded-xl border border-white/5">
+                    <div className="bg-white p-4 rounded-xl border border-neutral-200 shadow-sm">
                         <h4 className="text-yellow-500 text-sm font-semibold mb-1">Producción</h4>
-                        <p className="text-neutral-400 text-sm">Fabricación, impresión y acabados supervisados.</p>
+                        <p className="text-neutral-500 text-sm">Fabricación, impresión y acabados supervisados.</p>
                     </div>
-                    <div className="bg-neutral-900/50 p-4 rounded-xl border border-white/5">
+                    <div className="bg-white p-4 rounded-xl border border-neutral-200 shadow-sm">
                         <h4 className="text-yellow-500 text-sm font-semibold mb-1">Calidad</h4>
-                        <p className="text-neutral-400 text-sm">Validación de prototipos y muestras de pre-producción.</p>
+                        <p className="text-neutral-500 text-sm">Validación de prototipos y muestras de pre-producción.</p>
                     </div>
                 </div>
             </div>
@@ -253,17 +253,17 @@ const timelineData = [
         title: "04. Entrega",
         content: (
             <div>
-                <p className="text-neutral-200 text-lg mb-8 leading-relaxed">
+                <p className="text-neutral-700 text-lg mb-8 leading-relaxed">
                     Coordinamos la logística nacional o internacional, gestionamos aduanas y realizamos la instalación en el punto de venta si el proyecto lo requiere. Tu tranquilidad es nuestra prioridad.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="bg-neutral-900/50 p-4 rounded-xl border border-white/5">
+                    <div className="bg-white p-4 rounded-xl border border-neutral-200 shadow-sm">
                         <h4 className="text-yellow-500 text-sm font-semibold mb-1">Logística</h4>
-                        <p className="text-neutral-400 text-sm">Transporte, tracking y entrega en fecha.</p>
+                        <p className="text-neutral-500 text-sm">Transporte, tracking y entrega en fecha.</p>
                     </div>
-                    <div className="bg-neutral-900/50 p-4 rounded-xl border border-white/5">
+                    <div className="bg-white p-4 rounded-xl border border-neutral-200 shadow-sm">
                         <h4 className="text-yellow-500 text-sm font-semibold mb-1">Post-Venta</h4>
-                        <p className="text-neutral-400 text-sm">Soporte, mantenimiento y análisis de resultados.</p>
+                        <p className="text-neutral-500 text-sm">Soporte, mantenimiento y análisis de resultados.</p>
                     </div>
                 </div>
             </div>
@@ -388,32 +388,45 @@ const KnowHow = () => {
                     </div>
                 </motion.div>
 
-                {/* ===== CTA ===== */}
-                <motion.div
-                    className="text-center"
-                    style={{ paddingTop: '40px', borderTop: '1px solid rgba(255,255,255,0.06)' }}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                >
-                    <h3 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '16px', color: 'var(--text-white)' }}>
-                        ¿Tienes un proyecto en mente?
-                    </h3>
-                    <p style={{ fontSize: '15px', color: 'var(--text-gray)', marginBottom: '32px', maxWidth: '480px', margin: '0 auto 32px' }}>
-                        Cuéntanos qué necesitas y te proponemos la mejor solución. Sin compromiso.
-                    </p>
-                    <button
-                        onClick={() => { router.push('/contact'); window.scrollTo(0, 0); }}
-                        className="btn btn-primary"
-                    >
-                        Pedir Presupuesto
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                    </button>
-                </motion.div>
+            </div>
 
+            {/* ===== Light CTA Section ===== */}
+            <div style={{ padding: '40px 0 100px' }}>
+                <div className="container">
+                    <motion.div
+                        className="text-center"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        <div style={{
+                            maxWidth: '780px',
+                            margin: '0 auto',
+                            padding: '56px 40px',
+                            borderRadius: '24px',
+                            border: '1px solid #E5E7EB',
+                            background: '#FFFFFF',
+                            boxShadow: '0 8px 30px rgba(0,0,0,0.04)'
+                        }}>
+                            <h3 style={{ fontSize: '28px', fontWeight: 600, marginBottom: '16px', color: '#1F2937' }}>
+                                ¿Tienes un proyecto en mente?
+                            </h3>
+                            <p style={{ fontSize: '15px', color: '#6B7280', marginBottom: '32px', maxWidth: '480px', margin: '0 auto 32px' }}>
+                                Cuéntanos qué necesitas y te proponemos la mejor solución. Sin compromiso.
+                            </p>
+                            <button
+                                onClick={() => { router.push('/contact'); window.scrollTo(0, 0); }}
+                                className="btn btn-primary"
+                            >
+                                Pedir Presupuesto
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginLeft: '8px' }}>
+                                    <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </motion.div>
+                </div>
             </div>
         </div>
     );

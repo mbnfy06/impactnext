@@ -1,7 +1,7 @@
 .knowhow {
-    padding: 120px 0 100px;
-    background: var(--bg-dark);
-    color: var(--text-white);
+    padding: 120px 0 0;
+    background: #FAFAFA;
+    color: var(--text-dark);
     position: relative;
     overflow: hidden;
 }
@@ -14,7 +14,7 @@
     right: -200px;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(245, 166, 35, 0.06) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(245, 166, 35, 0.08) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -51,7 +51,7 @@
 .knowhow__title {
     font-size: clamp(32px, 4vw, 48px);
     font-weight: 600;
-    color: var(--text-white);
+    color: #1F2937;
     line-height: 1.15;
     max-width: 600px;
 }
@@ -63,7 +63,7 @@
     gap: 40px;
     margin-bottom: 80px;
     padding-bottom: 80px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid #E5E7EB;
 }
 
 .knowhow__stat {
@@ -81,7 +81,7 @@
 
 .knowhow__stat-label {
     font-size: 14px;
-    color: var(--text-gray);
+    color: #6B7280;
     line-height: 1.4;
 }
 
@@ -94,13 +94,14 @@
 }
 
 .knowhow__expertise-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
     border-radius: 16px;
     padding: 40px 36px;
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .knowhow__expertise-card::before {
@@ -116,9 +117,10 @@
 }
 
 .knowhow__expertise-card:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(245, 166, 35, 0.15);
+    background: #FFFFFF;
+    border-color: rgba(245, 166, 35, 0.4);
     transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(245, 166, 35, 0.1);
 }
 
 .knowhow__expertise-card:hover::before {
@@ -140,13 +142,13 @@
 .knowhow__expertise-title {
     font-size: 20px;
     font-weight: 600;
-    color: var(--text-white);
+    color: #1F2937;
     margin-bottom: 12px;
 }
 
 .knowhow__expertise-description {
     font-size: 14px;
-    color: var(--text-gray);
+    color: #6B7280;
     line-height: 1.7;
     margin-bottom: 20px;
 }
@@ -162,9 +164,9 @@
     font-weight: 500;
     padding: 4px 12px;
     border-radius: 50px;
-    background: rgba(255, 255, 255, 0.06);
-    color: var(--text-gray-light);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: #F3F4F6;
+    color: #4B5563;
+    border: 1px solid #E5E7EB;
 }
 
 /* ===== Differentiators ===== */
@@ -178,13 +180,13 @@
 .knowhow__diff-header h3 {
     font-size: 28px;
     font-weight: 600;
-    color: var(--text-white);
+    color: #1F2937;
     margin-bottom: 16px;
 }
 
 .knowhow__diff-header p {
     font-size: 15px;
-    color: var(--text-gray);
+    color: #6B7280;
     line-height: 1.7;
     max-width: 420px;
 }
@@ -200,15 +202,17 @@
     align-items: flex-start;
     gap: 16px;
     padding: 20px 24px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
     border-radius: 12px;
     transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .knowhow__diff-item:hover {
-    background: rgba(255, 255, 255, 0.04);
-    border-color: rgba(245, 166, 35, 0.1);
+    background: #FFFFFF;
+    border-color: rgba(245, 166, 35, 0.35);
+    box-shadow: 0 4px 16px rgba(245, 166, 35, 0.08);
 }
 
 .knowhow__diff-icon {
@@ -226,13 +230,13 @@
 .knowhow__diff-content h4 {
     font-size: 15px;
     font-weight: 600;
-    color: var(--text-white);
+    color: #1F2937;
     margin-bottom: 4px;
 }
 
 .knowhow__diff-content p {
     font-size: 13px;
-    color: var(--text-gray);
+    color: #6B7280;
     line-height: 1.6;
 }
 
@@ -255,7 +259,7 @@
 
 @media (max-width: 640px) {
     .knowhow {
-        padding: 80px 0 60px;
+        padding: 80px 0 0;
     }
 
     .knowhow__stats {

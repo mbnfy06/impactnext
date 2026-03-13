@@ -18,7 +18,7 @@ export default function Header() {
   const pathname = usePathname();
 
   const isHomePage = pathname === '/';
-  const isDarkText = pathname === '/contact' && !scrolled && !open;
+  const isDarkText = (pathname === '/contact' || pathname === '/services' || pathname === '/know-how') && !scrolled && !open;
 
   const links = [
     { label: "Servicios", id: "servicios", path: "/services" },
